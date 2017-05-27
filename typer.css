@@ -1,0 +1,34 @@
+Body{
+	background-color: grey;
+}
+.LeftPane{
+	width: 66%;
+	height: 100vh;
+	background-color: goldenrod;
+	float: left;
+}
+.Text{
+	background-color: grey;
+	border-style: solid;
+	border-color: black;
+	width: 50%;
+	height: 300px;
+}
+#TopPane{
+	border-style: solid;
+	border-color: black;
+	float: top;
+}
+
+#BottomPane{
+	border: solid;
+	float: bottom;
+}
+
+#RightPane{]
+	position: absolute;
+	background-color: orange;
+	float: right;
+	height: 100vh;
+	width: 34%;
+}
