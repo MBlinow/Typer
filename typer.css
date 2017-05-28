@@ -32,3 +32,8 @@ Body{
 	height: 100vh;
 	width: 34%;
 }
+
+#TextBox{
+	height: inherit;
+	width: inherit;
+}
