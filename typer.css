@@ -1,39 +1,57 @@
+//ColorPalette
+//#EFF7CF 
+//#BAD9B5
+//#ABA361
+//#732C2C
+//#420C14
+{}
+
 Body{
-	background-color: grey;
+	background-color: #732C2C;
 }
 .LeftPane{
 	width: 66%;
 	height: 100vh;
-	background-color: goldenrod;
 	float: left;
 }
 .Text{
-	background-color: grey;
-	border-style: solid;
-	border-color: black;
+	background-color: #EFF7CF;
+
 	width: 50%;
 	height: 300px;
+	font-family: serif;
+	font-size: 20px;
 }
 #TopPane{
 	border-style: solid;
 	border-color: black;
 	float: top;
+
+	border-radius: 15px;
+
 }
 
 #BottomPane{
 	border: solid;
 	float: bottom;
+	background-color: white;
+	border-radius: 15px;
 }
 
-#RightPane{]
-	position: absolute;
-	background-color: orange;
+#RightPane{
+	border-left: thick;
+	border-left-color: black;
+	background-color: #ABA361;
 	float: right;
 	height: 100vh;
 	width: 34%;
+	border-radius: 15px;
+	font-size: 50px;
 }
 
 #TextBox{
-	height: inherit;
-	width: inherit;
+	height: 98%;
+	width: 99%;
+	border-radius: 15px;
+	border-width:0px;
 }
