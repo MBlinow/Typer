@@ -16,7 +16,7 @@ Body{
 }
 .Text{
 	background-color: #EFF7CF;
-
+	overflow: scroll;
 	width: 50%;
 	height: 300px;
 	font-family: serif;
@@ -34,7 +34,6 @@ Body{
 #BottomPane{
 	border: solid;
 	float: bottom;
-	background-color: white;
 	border-radius: 15px;
 }
 

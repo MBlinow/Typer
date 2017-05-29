@@ -1,25 +1,25 @@
 
 $(document).ready(function(){
 	//Main function.  Starts on page load.
-
-	
-	//This is the text that will be used in the typing test.
-	$('#TopPane').text("The quick brown fox jumps over the lazy dog.");
-	//
-	//This is the time limit in seconds
-	timeLimit=90;
-	$("#Timer").text(formatSecondstoMinutes(timeLimit));
 	
 	waitToStart();
-	matchCharLengths();
-
-
 	
 });
 
 function waitToStart(){
 	//creates an interval timer to call waitCheck()
-	//this timer will be cleared once the test is started
+	//sets initial value for timer and 
+	//initial values for the clock and TopPane displays
+
+	
+	//This is the text that will be used in the typing test.
+	$('#TopPane').text("They say that to do injustice is, by nature, good; to suffer injustice, evil; but that the evil is greater than the good. And so when men have both done and suffered injustice and have had experience of both, not being able to avoid the one and obtain the other, they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants; and that which is ordained by law is termed by them lawful and just. This they affirm to be the origin and nature of justice; --it is a mean or compromise, between the best of all, which is to do injustice and not be punished, and the worst of all, which is to suffer injustice without the power of retaliation; and justice, being at a middle point between the two, is tolerated not as a good, but as the lesser evil, and honoured by reason of the inability of men to do injustice. For no man who is worthy to be called a man would ever submit to such an agreement if he were able to resist; he would be mad if he did. Such is the received account, Socrates, of the nature and origin of justice.");
+	
+	//This is the time limit in seconds
+	timeLimit=90;
+	
+	$("#Timer").text(formatSecondstoMinutes(timeLimit));
+	matchCharLengths();
 	
 	WaitInterval= setInterval(waitCheck, 50);
 	
@@ -125,6 +125,12 @@ function gradeTest(){
 		}
 	}
 	calcWordsPerMinute(initialTime-timeLimit, correctWords)
+	displayAccuracy(inputWords.length, correctWords)
+}
+
+function displayAccuracy(typed, correct){
+	var accuracy=Math.round((correct/typed)*100);
+	$("#accuracy").text("Accuracy: "+accuracy+"%");
 }
 
 function outputGradedText(word, isCorrect){
