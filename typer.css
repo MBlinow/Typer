@@ -17,10 +17,15 @@ Body{
 .Text{
 	background-color: #EFF7CF;
 	overflow: scroll;
-	width: 50%;
+	width: 80%;
 	height: 300px;
 	font-family: serif;
 	font-size: 20px;
+}
+.Header{
+	font-size: 30px;
+	color:#BAD9B5;
+	font-family:"Courier New", Courier, monospace; 
 }
 #TopPane{
 	border-style: solid;
@@ -53,4 +58,9 @@ Body{
 	width: 99%;
 	border-radius: 15px;
 	border-width:0px;
+}
+
+#Title{
+	font-size: 600%;
+	color: #BAD9B5;
 }

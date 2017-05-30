@@ -20,6 +20,9 @@ TestController.prototype = {
 		//When the input word is equal to the expected word, that word is correct
 		//Spaces are ignored here, but are counted towards the total character count 
 		//so extra spaces will limit final scores
+		//One downside to this solution is that adding an extra word or accidentally placing a space inside
+		//of a word will cause all later words to show as incorrect.
+		//
 		
 		var input=$("#TextBox").val();
 		var expectedInput=$("#TopPane").text();
@@ -52,14 +55,14 @@ TestController.prototype = {
 		//Accepts arguments for time elapsed and amount of words correctly spelled
 		//outputs a string indicating words per minute
 		var minutes=elapsedTime/60;
-		$("#results").text("WPM: "+ Math.round(words/minutes))
+		$("#Results").text("WPM: "+ Math.round(words/minutes))
 		},
 		
 		displayAccuracy: function(typed, correct){
 		//calculates the accuracy then sends to to the #accuracy html element
 		
 		var accuracy=Math.round((correct/typed)*100);
-		$("#accuracy").text("Accuracy: "+accuracy+"%");
+		$("#Accuracy").text("Accuracy: "+accuracy+"%");
 		},
 		
 	outputGradedText: function(word, isCorrect){
@@ -195,3 +198,9 @@ function startTest(){
 
 	
 }
+
+//Additional feature ideas:
+//Buttons to input new values for starting text and time
+//Reset button to start test over without refreshing page
+//Variety of different text samples and a way to choose between them or pick one at random
+//
