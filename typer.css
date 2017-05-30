@@ -37,6 +37,9 @@ Body{
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
+#author{
+	color: #BAD9B5
+}
 .Header{
 	font-size: 30px;
 	color:#BAD9B5;
