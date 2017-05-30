@@ -58,9 +58,8 @@ TestController.prototype = {
 		$("#Results").text("WPM: "+ Math.round(words/minutes))
 		},
 		
-		displayAccuracy: function(typed, correct){
+	displayAccuracy: function(typed, correct){
 		//calculates the accuracy then sends to to the #accuracy html element
-		
 		var accuracy=Math.round((correct/typed)*100);
 		$("#Accuracy").text("Accuracy: "+accuracy+"%");
 		},
@@ -85,7 +84,9 @@ TestController.prototype = {
 		$("#WordsTyped").text("Words Typed: "+$("#TextBox").val().trim(' ').split(/[ ]+/).length);
 		},
 		
-		stopTest: function(){
+	stopTest: function(){
+		//stops the interval timer running the clock
+		//and sets the TextBox to readonly
 		clearInterval(countdownInterval);
 		$("#TextBox").attr("readonly", "True");
 		this.gradeTest();
@@ -145,7 +146,7 @@ $(document).ready(function(){
 	//StartTime= Initial Timer for Test
 	var startTime=90;
 	//This is the text that will be used in the typing test.
-	$('#TopPane').text("They say that to do injustice is, by nature, good; to suffer injustice, evil; but that the evil is greater than the good. And so when men have both done and suffered injustice and have had experience of both, not being able to avoid the one and obtain the other, they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants; and that which is ordained by law is termed by them lawful and just. This they affirm to be the origin and nature of justice; --it is a mean or compromise, between the best of all, which is to do injustice and not be punished, and the worst of all, which is to suffer injustice without the power of retaliation; and justice, being at a middle point between the two, is tolerated not as a good, but as the lesser evil, and honoured by reason of the inability of men to do injustice. For no man who is worthy to be called a man would ever submit to such an agreement if he were able to resist; he would be mad if he did. Such is the received account, Socrates, of the nature and origin of justice.");
+	$('#TopPane').text("Day had broken cold and grey, exceedingly cold and grey, when the man turned aside from the main Yukon trail and climbed the high earth- bank, where a dim and little-travelled trail led eastward through the fat spruce timberland. It was a steep bank, and he paused for breath at the top, excusing the act to himself by looking at his watch. It was nine o'clock. There was no sun nor hint of sun, though there was not a cloud in the sky. It was a clear day, and yet there seemed an intangible pall over the face of things, a subtle gloom that made the day dark, and that was due to the absence of sun. This fact did not worry the man. He was used to the lack of sun. It had been days since he had seen the sun, and he knew that a few more days must pass before that cheerful orb, due south, would just peep above the sky- line and dip immediately from view. The man flung a look back along the way he had come. The Yukon lay a mile wide and hidden under three feet of ice. On top of this ice were as many feet of snow. It was all pure white, rolling in gentle undulations where the ice-jams of the freeze-up had formed. North and south, as far as his eye could see, it was unbroken white, save for a dark hair-line that curved and twisted from around the spruce- covered island to the south, and that curved and twisted away into the north, where it disappeared behind another spruce-covered island. This dark hair-line was the trail--the main trail--that led south five hundred miles to the Chilcoot Pass, Dyea, and salt water; and that led north seventy miles to Dawson, and still on to the north a thousand miles to Nulato, and finally to St. Michael on Bering Sea, a thousand miles and half a thousand more.");
 	////////////////////////////////////////
 	Tester= new TestController();
 	Tester.Timer= new Timer(startTime);
